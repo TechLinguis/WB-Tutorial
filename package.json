@@ -1,0 +1,18 @@
+{
+  "name": "workbuddy-docs",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "get-contributors": "get-contributors TechLinguis/WB-Tutorial -f docs/.vitepress/contributors.json",
+    "docs:dev": "node scripts/run-vitepress.mjs dev docs",
+    "docs:build": "get-contributors TechLinguis/WB-Tutorial -f docs/.vitepress/contributors.json && node scripts/run-vitepress.mjs build docs",
+    "docs:preview": "node scripts/run-vitepress.mjs preview docs"
+  },
+  "devDependencies": {
+    "vitepress": "^1.6.3"
+  },
+  "dependencies": {
+    "@cssnr/vitepress-plugin-contributors": "^0.2.0"
+  }
+}
